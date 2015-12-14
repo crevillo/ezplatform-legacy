@@ -1,7 +1,7 @@
 {
-    "name": "ezsystems/ezplatform",
-    "description": "eZ Platform distribution",
-    "homepage": "https://github.com/ezsystems/ezplatform",
+    "name": "crevillo/ezplatform-legacy",
+    "description": "eZ Platform distribution with Legacy",
+    "homepage": "https://github.com/crevillo/ezplatform-legacy",
     "license": "GPL-2.0",
     "authors": [
         {
