@@ -20,3 +20,8 @@ ezpublish:
     system:
         site_group:
             languages: [eng-GB]
+
+ez_publish_legacy:
+    system:
+        site_admin:
+           legacy_mode: true
