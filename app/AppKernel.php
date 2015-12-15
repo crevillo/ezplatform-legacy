@@ -46,7 +46,8 @@ class AppKernel extends Kernel
             new EzSystems\RepositoryFormsBundle\EzSystemsRepositoryFormsBundle(),
             new EzSystems\EzPlatformSolrSearchEngineBundle\EzSystemsEzPlatformSolrSearchEngineBundle(),
             new AppBundle\AppBundle(),
-            new eZ\Bundle\EzPublishLegacyBundle\EzPublishLegacyBundle($this)
+            new eZ\Bundle\EzPublishLegacyBundle\EzPublishLegacyBundle($this),
+            new Crevillo\PlatformLegacyInstallerBundle\CrevilloPlatformLegacyInstallerBundle()
         );
 
         switch ($this->getEnvironment()) {
