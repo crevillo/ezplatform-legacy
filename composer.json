@@ -9,9 +9,6 @@
             "homepage": "https://github.com/ezsystems/ezplatform/contributors"
         }
     ],
-    "replace": {
-        "ezsystems/ezpublish-community": "*"
-    },
     "autoload": {
         "psr-0": { "": "src/" }
     },
