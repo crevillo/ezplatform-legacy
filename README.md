@@ -1,16 +1,19 @@
-# eZ Platform
+# eZ Platform with Legacy
 
-## What is eZ Platform ?
-*eZ Platform* is a 100% open source professional CMS (Content Management System) developed by eZ Systems AS and the eZ Community.
+## What is eZ Platform with Legacy?
+Are you one of those developers that still don't want to get ride of Legacy admin interface?
+Since [this commit](https://github.com/ezsystems/ezplatform/commit/5a76be259697f308d93c666f75d2b1f808377846)
+eZ Platform is not shipped with legacy-bridge anymore. So, if you still want to add legacy admin 
+interface and use all those old eZ Publish extensions, you need to adapt your installation following
+the instructions given in the [legacy brige INSTALL.md file](https://github.com/ezsystems/LegacyBridge/blob/master/INSTALL.md)
 
-*eZ Platform* is the 6th generation of *eZ Publish*, it is built on top of the Symfony framework (Full Stack).
-It has been in development since 2011, and integral part of the *eZ Publish Platform 5.x* as "Platform stack" since 2012.
+eZ Platform with Legacy will just do this for you, allowing the installation of eZ Platform and old legacy
+code without the need to manually modify anything.
 
-## eZ Publish vs. eZ Platform
-This repository contains *eZ Platform* (formerly known also as *eZ Publish 6*) the next generation cms which uses the same Symfony kernel as *eZ Publish 5*, but does not include the legacy kernel, nor its library dependencies.
-eZ Platform is where the new features are added.
-
-The [eZ Publish 5](https://github.com/ezsystems/ezpublish-community) repository, mostly maintained for backwards compatibility, integrates eZ Publish Legacy.
+## eZ Publish Community vs. this repo
+The eZ Publish community is still available, but it does not contain last changes made to eZ Platform repo and so
+ you won't get all the last updates eZ Platform has. 
+Oh the other side, eZ Platform with Legacy can be used with the last versions of eZ Platform.  
 
 ### Abstract:
 - **Very extensible** *You can extend the application and the content model in many ways*
@@ -44,8 +47,8 @@ features for editorial teams and media companies, 100% built on top of *eZ Platf
 - eZ Systems AS *(commercial products and services)*: [ez.no](http://ez.no/)
 - eZ Community: [share.ez.no](http://ez.no/)
 
-## Install and Upgrade
-For installation & upgrade instructions, see [INSTALL.md](https://github.com/ezsystems/ezplatform/blob/master/INSTALL.md).
+## Install
+For installation instructions, see [INSTALL.md](https://github.com/crevillo/ezplatform-legacy/blob/master/INSTALL.md).
 
 ## Requirements
 Full requirements can be found on the [Requirements](https://doc.ez.no/display/TECHDOC/Requirements) page.
@@ -53,21 +56,7 @@ Full requirements can be found on the [Requirements](https://doc.ez.no/display/T
 *TL;DR: minimum PHP 5.4.4 and higher, using mod_php or php-fpm.*
 
 ## Issue tracker
-Submitting bugs, improvements and stories is possible on https://jira.ez.no/browse/EZP.
-If you discover a security issue, please see how to responsibly report such issues on https://doc.ez.no/Security.
-
-## Backwards compatibility
-eZ Platform aiming to be **100% content compatible** with eZ Publish 5.x, 4.x and 3.x *(introduced in 2002)*, meaning
-that content in those versions of the CMS can be upgraded using
-[online documentation](http://doc.ez.no/eZ-Publish/Upgrading) to eZ Platform.
-
-Unlike eZ Publish Platform 5.x, eZ Platform does not ship with eZ Publish Legacy (4.x). For Platform kernel use combined
-with legacy, eZ Publish Platform 5.4 is the most stable choice, offering support and maintenance updates until 2021.
-Alternative is releases of eZ Publish Community, latest as of Oct 2015 is v2014.11 found at
-[ezpublish-community](https://github.com/ezsystems/ezpublish-community).
-
-## COPYRIGHT
-Copyright (C) 1999-2015 eZ Systems AS. All rights reserved.
+Submitting bugs, improvements and stories is possible on the issue tracker or this repo.
 
 ## LICENSE
 http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
