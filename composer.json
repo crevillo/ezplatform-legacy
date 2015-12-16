@@ -68,7 +68,7 @@
             "eZ\\Bundle\\EzPublishLegacyBundle\\Composer\\ScriptHandler::installLegacyBundlesExtensions"
         ],
         "post-create-project-cmd": [
-            "eZ\\Bundle\\EzPublishCoreBundle\\Composer\\ScriptHandler::installWelcomeText"
+            "Crevillo\\PlatformLegacyInstallerBundle\\Composer\\ScriptHandler::installWelcomeText"
         ]
     },
     "config": {
