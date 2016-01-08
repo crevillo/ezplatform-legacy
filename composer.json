@@ -59,6 +59,7 @@
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Crevillo\\PlatformLegacyInstallerBundle\\Composer\\ScriptHandler::createLegacyOverrideFiles",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
@@ -85,6 +86,9 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         },
-        "ezpublish-legacy-dir": "ezpublish_legacy"
+        "ezpublish-legacy-dir": "ezpublish_legacy",
+        "legacy-settings-site-parameters": {
+            "file": "ezpublish_legacy/settings/override/site.ini.append.php"
+        }
     }
 }
