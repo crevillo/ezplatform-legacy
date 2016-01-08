@@ -3,7 +3,7 @@
 ## What is eZ Platform with Legacy?
 Are you one of those developers that still don't want to get ride of Legacy admin interface?
 Since [this commit](https://github.com/ezsystems/ezplatform/commit/5a76be259697f308d93c666f75d2b1f808377846)
-eZ Platform is not shipped with legacy-bridge anymore. So, if you still want to add legacy admin 
+eZ Platform is not shipped with legacy-bridge anymore. So, if you still want to add legacy admin
 interface and use all those old eZ Publish extensions, you need to adapt your installation following
 the instructions given in the [legacy brige INSTALL.md file](https://github.com/ezsystems/LegacyBridge/blob/master/INSTALL.md)
 
@@ -12,8 +12,8 @@ code without the need to manually modify anything.
 
 ## eZ Publish Community vs. this repo
 The eZ Publish community is still available, but it does not contain last changes made to eZ Platform repo and so
- you won't get all the last updates eZ Platform has. 
-Oh the other side, eZ Platform with Legacy can be used with the last versions of eZ Platform.  
+ you won't get all the last updates eZ Platform has.
+Oh the other side, eZ Platform with Legacy can be used with the last versions of eZ Platform.
 
 ### Abstract:
 - **Very extensible** *You can extend the application and the content model in many ways*

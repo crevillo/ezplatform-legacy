@@ -3,6 +3,7 @@
     "description": "eZ Platform distribution with Legacy",
     "homepage": "https://github.com/crevillo/ezplatform-legacy",
     "license": "GPL-2.0",
+    "type": "project",
     "authors": [
         {
             "name": "eZ dev-team & eZ Community",
