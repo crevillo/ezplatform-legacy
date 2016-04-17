@@ -14,7 +14,7 @@
         "psr-0": { "": "src/" }
     },
     "require": {
-        "php": ">=5.4.4",
+        "php": "~5.5|~7.0",
         "symfony/symfony": "~2.7.0",
         "twig/extensions": "~1.0",
         "symfony/assetic-bundle": "~2.3",
@@ -24,11 +24,10 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "tedivm/stash-bundle": "~0.4.3",
-        "ezsystems/ezpublish-kernel": "~6.0@dev",
-        "ezsystems/repository-forms": "~1.0.0@dev",
-        "ezsystems/ezplatform-solr-search-engine": "~1.0.0@dev",
-        "ezsystems/platform-ui-bundle": "~1.0.0@dev",
-        "ezsystems/platform-ui-assets-bundle": "~1.0.0@dev",
+        "ezsystems/ezpublish-kernel": "~6.2@dev",
+        "ezsystems/repository-forms": "~1.1@dev",
+        "ezsystems/ezplatform-solr-search-engine": "~1.0@dev",
+        "ezsystems/platform-ui-bundle": "~1.2@dev",
         "egulias/listeners-debug-command-bundle": "~1.9",
         "white-october/pagerfanta-bundle": "1.0.*",
         "hautelook/templated-uri-bundle": "~1.0 | ~2.0",
@@ -36,7 +35,8 @@
         "symfony/expression-language": "~2.4",
         "sensio/framework-extra-bundle": "~3.0",
         "ezsystems/legacy-bridge": "@dev",
-        "crevillo/ezplatform-legacy-installer-bundle": "~0.1"
+        "crevillo/ezplatform-legacy-installer-bundle": "~0.1",
+        "ezsystems/ez-support-tools": "~0.1.0@dev"
     },
     "require-dev": {
         "behat/behat": "~3.0",
@@ -45,7 +45,7 @@
         "behat/mink-goutte-driver": "*",
         "behat/mink-selenium2-driver": "*",
         "jarnaiz/behat-junit-formatter": "^1.3",
-        "ezsystems/behatbundle": "@dev"
+        "ezsystems/behatbundle": "~6.2@dev"
     },
     "scripts": {
         "post-install-cmd": [
@@ -80,8 +80,6 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
-        "___ezpublish-asset-dump-env": "To set environment used by dumpAssets script, like 'prod', or 'none' to skip",
-        "ezpublish-asset-dump-env": "",
         "___symfony-assets-install": "One of 'symlink', 'relative' (symlinks) or 'hard'",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {

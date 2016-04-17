@@ -53,7 +53,7 @@ For installation instructions, see [INSTALL.md](https://github.com/crevillo/ezpl
 ## Requirements
 Full requirements can be found on the [Requirements](https://doc.ez.no/display/TECHDOC/Requirements) page.
 
-*TL;DR: minimum PHP 5.4.4 and higher, using mod_php or php-fpm.*
+*TL;DR: supported PHP versions are 5.5, 5.6 and 7.0 (for dev use), using mod_php or php-fpm, and either MySQL 5.5/5.6 or MariaDB 5.5/10.0.*
 
 ## Issue tracker
 Submitting bugs, improvements and stories is possible on the issue tracker or this repo.

@@ -11,8 +11,9 @@
   *a database server* needed for this software. For further information on requirements [see online doc](https://doc.ez.no/display/TECHDOC/Requirements)
 
   **Before you start**:
-  - Create Database: Installation will ask you for credentials/details for which database to use
-    *Note: Right now installer only supports MySQL, Postgres support should be (re)added in one of the upcoming releases.*
+  - Create Database: Installation will ask you for credentials/details for which database to use, example with mysql:
+    `CREATE DATABASE <database> CHARACTER SET utf8;` *Note: Right now installer only supports MySQL and MariaDB, Postgres
+    support will be (re)added in one of the upcoming releases.*
   - Set php.ini memory_limit=256M before running commands below
   - *Optional:* You can also setup Solr to be used by eZ Platform and take note of the url it is accessible on
 
@@ -33,17 +34,11 @@
        ```
 
 2. *Only for *NIX users* **Setup folder rights**<a name="install-2-folder-rights"></a>:
-    
+
     Follow one of the options given in the [eZ Platform install instructions](https://github.com/ezsystems/ezplatform/blob/master/INSTALL.md)
 
 
-3. **Configure a VirtualHost**<a name="install-3-vhost"></a>:
-
-    A virtual host setup is the recommended, most secure setup of eZ Publish.
-    General virtual host setup template for Apache and Nginx can be found in [doc/ folder](doc/).
-
-
-4. **Run installation command**<a name="install-4-db-setup"></a>:
+3. **Run installation command**<a name="install-4-db-setup"></a>:
 
     You may now complete the eZ Platform installation with ezplatform:install command, example of use:
 
@@ -53,5 +48,29 @@
 
     **Note**: Password for the generated `admin` user is `publish`, this name and password is needed when you would like to login to backend Platform UI. Future versions will prompt you for a unique password during installation.
 
+
+4. **Configure a VirtualHost**<a name="install-3-vhost"></a>:
+
+    #### Recommended use
+    Configure virtual host by either taking examples from [Nginx](doc/nginx) or [Apache2](doc/apache2) documentation,
+    or by using provided script to generate from templates, for help see `./bin/vhost.sh -h`, example:
+    ```bash
+    ./bin/vhost.sh --basedir=/var/www/ezplatform \\
+      --template-file=doc/apache2/vhost.template \\
+      --host-name=ezplatform \\
+      | sudo tee /etc/apache2/sites-enabled/ezplatform.conf > /dev/null
+    ```
+    Check and adapt the generated vhost config, and then restart Apache or Nginx.
+
+    #### Testing use
+    For just local testing without installing a full web-server, while slow you can also run PHP's built-in
+    web server using the following command:
+    ```bash
+    $ php app/console server:run
+    ```
+
+    *Note: While far from meant for production use, you can run the command above with `--env=prod` to disable debug.*
+
+
 You can now point your browser to the installation and browse the site. To access the Platform UI backend, use the `/ez` URL.
-To access the old legacy admin, use the `/site_admin` url. 
+To access the old legacy admin, use the `/site_admin` url.

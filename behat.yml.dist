@@ -1,5 +1,7 @@
 # This file contains the default configuration for behat testing using EzSystems/BehatBundle
 default:
+    calls:
+        error_reporting: 14335 # E_ALL & ~E_USER_DEPRECATED
     extensions:
         Behat\MinkExtension:
             base_url: 'http://localhost'
@@ -25,6 +27,8 @@ default:
     suites: ~
 
 imports:
-    - vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/behat.yml
-    - vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishRestBundle/behat.yml
-    - vendor/ezsystems/platform-ui-bundle/behat.yml
+    - vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/behat_suites.yml
+    - vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishRestBundle/behat_suites.yml
+    - vendor/ezsystems/behatbundle/EzSystems/BehatBundle/behat_suites.yml
+    - vendor/ezsystems/platform-ui-bundle/behat_suites.yml
+    - vendor/ezsystems/repository-forms/behat_suites.yml
