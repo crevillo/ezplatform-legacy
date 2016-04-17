@@ -9,19 +9,19 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [site]
+        list: [%frontend_siteaccess%, %admin_siteaccess%]
         groups:
-            site_group: [site]
-        default_siteaccess: site
+            site_group: [%frontend_siteaccess%]
+        default_siteaccess: %frontend_siteaccess%
         match:
             URIElement: 1
 
     # System settings, grouped by siteaccess and/or siteaccess group
     system:
         site_group:
-            languages: [eng-GB]
+            languages: [eng-GB, esl-ES]
 
 ez_publish_legacy:
     system:
-        site_admin:
+        %admin_siteaccess%:
            legacy_mode: true
